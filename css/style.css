@@ -1,0 +1,721 @@
+*{
+	transition: .5s;
+	box-sizing:border-box;
+}
+
+
+[type=checkbox]{display: none;}
+.contenedor{
+	max-width:1200px;
+	min-width:320px;
+}
+
+/*-------- Horario --------*/
+
+header p{
+	color:#001A82;
+	text-align: center;
+	font-size: 1em;
+	font-family: Century Gothic;
+}
+
+/*-------- header --------*/
+
+header{
+	position: relative;
+	width: 100%;
+	height: 30vh;
+}
+
+/*-------- box menu --------*/
+
+header .menu_hamburguesa{
+	position: absolute;
+	transform: translate(0,50%); 
+	z-index: 10;
+	width: 24%;
+	height: 30%;
+	background-color:#001A82;
+	display: flex;
+	justify-content: center;
+	padding-top: 7%;
+	padding-bottom: 4%;
+	transition: .5s;
+/*	outline: 2px solid yellow;*/
+}
+
+/*-------- Barrita del centro --------*/
+
+header .menu_hamburguesa span{
+	width: 23px;
+	height: 5px;
+	margin-bottom: 5px;
+	background: #f5f5f5;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	transition: .5s;
+	z-index: 10;
+}
+
+/*-------- Barrita de arriba --------*/
+
+header .menu_hamburguesa span:after{
+	content: "";
+	width: 23px;
+	height: 5px;
+	background: #f5f5f5;
+	position: absolute;
+	display: inline-block;
+	margin-left: -50%;
+	top: -7px;
+	transition: .5s;
+	z-index: 10;
+}
+
+/*-------- Barrita de abajo --------*/
+
+header .menu_hamburguesa span:before{
+	content: "";
+	width: 23px;
+	height: 5px;
+	background: #f5f5f5;
+	position: absolute;
+	display: inline-block;
+	margin-left: -50%;
+	top: 7px;
+	transition: .5s;
+	z-index: 10;
+}
+
+/*-------- checkbox --------*/
+
+#m_ch:checked ~ .menu_hamburguesa{
+	top: -12%;
+	z-index: 25;
+	background-color: transparent;
+}
+#m_ch:checked ~ .menu_hamburguesa span{
+	background: #001A82;
+	z-index: 25;
+}
+
+#m_ch:checked ~ .menu_hamburguesa span::before{
+	transform: rotate(-135deg);
+	top: 0;
+	z-index: 25;
+}
+#m_ch:checked ~ .menu_hamburguesa span::after{
+	transform: rotate(135deg);
+	top: 0;
+	z-index: 25;
+}
+
+#m_ch:checked ~ .menu{
+	left: 0px;
+	top: 0;
+	z-index: 12;
+
+}
+
+
+header .menu{
+	width: 90%;
+	height: 100vh;
+	background: #f5f5f5;
+	position: absolute;
+	top: 0;
+	z-index: 12;
+	left: -900px;
+}
+/*-------- barra azul del menu --------*/
+
+header .header_menu{
+	width: 100%;
+	height: 60px;
+	background: #001A82;
+	display: flex;
+	align-items: center;
+}
+
+/*.logo_menu{
+	width: auto;
+	height: 5%;
+	margin-left: 20px;
+	position: absolute;
+	right: 20%;
+
+}*/
+
+.face_menu{
+  	width: auto;
+  	height: 5vh;
+  	margin-top: 4px;
+  	border:0;
+  	position: absolute;
+  	top: 2%;
+  	left: 20%;
+}
+
+.opciones_menu{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	opacity: 0.6;
+}
+
+.opciones_menu a{
+	color: #001A82; 
+	font-size: 1.2em;
+	font-family: Century Gothic;
+}
+
+/*-------- linea --------*/
+
+.menu hr{
+	background-color: #001A82;
+	height: 1px;
+	width: 85%;
+	margin: auto;
+}
+
+/*-------- iconos del menu --------*/
+.iconos_menu{
+	width: auto;
+	height: 45%;
+	margin-right: 10px;
+}
+
+.opciones_menu:hover{
+	opacity: 1;
+}
+
+/*
+----- Logo Principal ------
+
+
+.logo_principal{
+	width: 40%;
+	height: auto;
+	margin-top: 15px;
+	margin-left: 30%;
+	display: flex;
+
+}*/
+
+
+/*-------- Call --------*/
+
+header .call{
+	position: absolute;
+	transform: translate(0,50%); 
+	right: 0;
+	z-index: 11;
+	width: 15%;
+	height: 30%;
+	right: 9%;
+}	
+
+.call > a > img{
+	height: 100%;
+}
+
+/*-------- Triangulos home --------*/
+
+
+.secciones{
+	width: 100vw;
+	height: auto;
+    margin-bottom: 10px;
+/*	outline: 1px solid red;*/
+}
+
+.sec-1{
+	width: 100vw;
+	height: auto;
+	/*outline: 2px solid pink;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+	padding-bottom: 45px;
+}
+
+.triangulos{
+	width: 100%;
+/*	outline: 3px solid ;*/
+	position: relative;
+}
+.sec-1 a{
+	color:#0428d2;
+	font-size: 2.8em;
+	font-family: impact;
+	text-align: center;
+	margin: auto;
+	z-index: 40;
+	position: absolute;
+}
+
+.tri_home {
+     width: 0;
+     height: 0;
+     position: absolute;
+     left: 17%;
+     border-right: 50px solid transparent;
+     border-top: 50px solid #ffc900;
+     border-left: 50px solid #ffc900; 
+     border-bottom: 50px solid transparent;
+}
+
+.tri_home2{
+     width: 0;
+     height: 0;
+     position: relative;
+     left: 52%;
+     border-right: 50px solid #ffc900;
+     border-top: 50px solid transparent;
+     border-left: 50px solid transparent;
+     border-bottom: 50px solid #ffc900;
+}
+
+.sec-2{
+	width: 100vw;
+	height: auto;
+/*	outline: 1px solid red;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+	padding-bottom: 45px;  
+	/*outline: 2px solid pink;*/
+}
+
+.sec-2 a{
+	color:#0428d2;
+	font-size: 2.8em;
+	font-family: impact;
+	text-align: center;
+	margin: auto;
+	z-index: 40;
+	position: absolute;
+}
+
+.sec-3{
+	width: 100vw;
+	height: auto;
+/*	outline: 1px solid red;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+	padding-bottom: 45px;  
+	/*outline: 2px solid pink;*/
+}
+
+.sec-3 a{
+	color:#0428d2;
+	font-size: 2.8em;
+	font-family: impact;
+	text-align: center;
+	margin: auto;
+	z-index: 40;
+	position: absolute;
+}
+
+
+
+
+.sec-4{
+	width: 100vw;
+	height: auto;
+/*	outline: 1px solid red;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+	padding-bottom: 45px;
+	/*outline: 2px solid pink;*/ 
+}
+
+.sec-4 a{
+	color:#0428d2;
+	font-size: 2.8em;
+	font-family: impact;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 40;
+	position: absolute;
+}
+
+.sec-5{
+	width: 100vw;
+	height: auto;
+/*	outline: 1px solid red;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+	padding-bottom: 45px;
+	/*outline: 2px solid pink;*/ 
+}
+
+.sec-5 a{
+	color:#0428d2;
+	font-size: 2.8em;
+	font-family: impact;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 40;
+	position: absolute;
+}
+/*-------- Secciones --------*/
+
+.sec_historia{
+	background: url(../imagenes_cel/historiavertical.jpg)  no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 70vh;
+}
+
+.quienes_somos h4{
+	margin-top: 45px;
+	padding-bottom: 45px;
+	text-align: center;
+	color: #001A82;
+	font-size: 3.5em;
+	font-family: Impact;
+}
+
+.quienes_somos p{
+	font-family: Century Gothic;
+	font-size: 1.2em;
+	margin-right: 10px; 
+	margin-left: 10px;
+	padding-bottom: 40px;
+}
+
+/*-------- Iconos servicios --------*/
+
+.iconos_sec2{
+	margin-top: 45px; 
+	width: auto;
+	height: 18vh;
+	justify-content: center;
+}
+
+.iconos_sec3{
+	margin-top: 45px; 
+	width: auto;
+	height: 25vh;
+	justify-content: center;
+
+}
+
+.iconos_sec4{
+	margin-top: 45px; 
+	width: auto;
+	height: 15vh;
+	justify-content: center;	
+}
+
+.sec_servicios{
+	background: url(../imagenes_cel/serviciosvertical.jpg)  no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 70vh;
+}
+
+.servicios h4{
+	margin-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	color: #001A82;
+	font-size: 1.6em;
+	font-family: Impact;
+}
+
+.servicios p{
+	font-family: Century Gothic;
+	font-size: 1.3em;
+	margin-right: 10px; 
+	margin-left: 10px;
+	padding-bottom: 40px;
+}
+
+.productos{
+	width:100vw;
+	height: 50vh;
+}
+
+.productos h4{
+	margin-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	color: #9d9d9d;
+	font-size: 4em;
+	font-family: Impact;
+}
+
+.ubicacion h4{
+	margin-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	color: #001A82;
+	font-size: 2.5em;
+	font-family: Impact;
+}
+
+.sec_ubicacion{
+	background: url(../imagenes_cel/ubicacionvertical.jpg)  no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 70vh;
+}
+
+
+.ubicacion p{
+	font-family: Century Gothic;
+	font-size: 1.2em;
+	margin-right: 10px; 
+	margin-left: 10px;
+	padding-bottom: 40px;
+}
+
+.per_1{
+	margin-top: 40px;
+	padding-bottom: 40px;
+
+}
+
+.per_2{
+	margin-top: 40px;
+	padding-bottom: 40px;
+
+}
+
+.per_3{
+	margin-top: 40px;
+	padding-bottom: 40px;
+
+}
+
+.sec_contacto{
+	background: url(../imagenes_cel/contactovertical.jpg)  no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 70vh;
+}
+
+
+.personal h2{
+	margin-top: 30px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #001A82;
+	font-size: 1.6em;
+	font-family: Impact;
+}
+.personal h3{
+	margin-top: 4px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #0428d2;
+	font-size: 1.3em;
+	font-family: Impact;
+}
+
+.personal a{
+	font-family: Century Gothic;
+	color: black;
+	font-size: 1.3em;
+	margin-right: 10px; 
+	margin-left: 10px;
+	padding-bottom: 40px;
+}
+
+.contacto h4{
+	margin-top: 30px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #ffbd00;
+	font-size: 2.5em;
+	font-family: Impact;
+}
+
+.contacto a{
+	font-family: Century Gothic;
+	color: black;
+	font-size: 1.7em;
+	margin-right: 10px; 
+	margin-left: 10px;
+	padding-bottom: 40px;
+}
+
+.contacto2 h4{
+	margin-top: 30px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #001A82;
+	font-size: 2em;
+	font-family: Impact;
+}
+
+.contacto2 a{
+	font-family: Century Gothic;
+	color: black;
+	font-size: 1.7em;
+	margin-right: 10px; 
+	margin-left: 10px;
+	padding-bottom: 40px;
+}
+/*-------- Footer --------*/
+
+.footer_box{
+	margin-top: 25%;
+	max-width:1200px;
+	min-width:320px;
+	background: #f5f5f5;
+	border-top: 7px solid #6274a3;
+}
+
+.nav_footer{
+	/*outline: 	1px solid red;*/
+	text-align: center;
+	margin-top: 40px;
+}
+
+.nav_footer a{
+	text-decoration: none;
+	color: #9d9d9d;
+	font-family: impact;
+	font-size: 2em;
+}
+.nav_footer li{
+	margin-bottom: 10px;
+}
+
+.iconos_footer{
+	width: 70px;
+	height: 70px;
+	display: flex;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+	margin-top: 70px;
+    padding: 5px
+}
+
+.text_icon {
+	text-align: center;
+}
+
+.text_icon a{
+	color: #9d9d9d;
+	font-size: 2em;
+	font-family: impact;
+}
+
+.line_down{
+	height: 25px;
+	width: 100vw;
+	background: #6274a3;
+	margin-top: 120px;
+}
+
+.line_down p{
+	color: #f5f5f5;
+	font-size: 0.7em;
+	font-family: Century Gothic;
+	margin: 5px 43px;
+    display: inline-block;
+
+}
+
+
+/*-------- Carrusel --------*/
+
+/* Slideshow container */
+.slideshow-container {
+	width: 100vw;
+	height: auto;
+  max-width: 1024px;
+  position: relative;
+  margin: auto;
+}
+
+.imagen_size{
+	width:100vw;
+	height: auto;
+} 
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.centrado{
+	width: 255px; 
+    height: 190px; 
+    background: #fcfefc;
+    opacity: .7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centrado h1{
+	margin-top: 20px;
+	font-size: 4em;
+	font-family: impact;
+	color: #23425b;
+}
+
+.dots_circle{
+	text-align:center;
+	position: relative;
+	bottom: 35px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+/*-------- The dots/bullets/indicators --------*/
+.dot {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin: 0 2px;
+  background-color: #ffbd00;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ffbd00;
+  opacity: 0.6;
+}
+
+/*-------- Fading animation --------*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
